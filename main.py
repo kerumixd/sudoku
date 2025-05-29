@@ -1,7 +1,6 @@
 import random
 import copy
 
-# Step 4: Solver used for checking uniqueness
 def solve_board(board, solutions, row=0, col=0):
     if row == 9:
         solutions[0] += 1
@@ -17,7 +16,6 @@ def solve_board(board, solutions, row=0, col=0):
                 solve_board(board, solutions, next_row, next_col)
                 board[row][col] = 0
 
-# Step 3: Remove numbers to create puzzle
 def remove_numbers(board, attempts=30):
     count = 0
     while count < attempts:
